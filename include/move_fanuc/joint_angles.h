@@ -4,6 +4,8 @@
 #ifndef JOINT_ANGLE_H
 #define JOINT_ANGLE_H
 
+std::vector<double> homing = {0, 0, 0, 0, 0, 0};
+
 std::vector<double> clean_pan_pt1 = {121.622419 * M_PI / 180, 10.351567 * M_PI / 180,
                                      -52.118777 * M_PI / 180, 62.344109 * M_PI / 180,
                                      -103.630656 * M_PI / 180, 31.936237 * M_PI / 180};

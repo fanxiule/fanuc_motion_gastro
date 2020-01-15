@@ -1,4 +1,4 @@
-#include <move_fanuc/move_fanuc.h>
+#include <move_fanuc/fanuc_motion.h>
 
 int main(int argc, char **argv)
 {
@@ -9,9 +9,8 @@ int main(int argc, char **argv)
 
     fanuc::Arm arm("manipulator");
     arm.visual_tools.prompt("Press 'next' in the RvizVisualToolsGui window");
-
-    std::vector<double> arm_home_joint = {0, 0, 0, 0, 0, 0};
-    arm.moveTargetJoint(arm_home_joint, true, true);
+    
+    goHome(arm, true);
 
     ros::shutdown();
     return 0;
