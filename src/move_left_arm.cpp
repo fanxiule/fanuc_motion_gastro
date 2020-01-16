@@ -11,15 +11,15 @@ int main(int argc, char **argv)
   arm.visual_tools.prompt("Press 'next' in the RvizVisualToolsGui window");
 
   pickUpCleanPan(arm, false);
-  getSauce(arm, false, 5);
+  getSauce(arm, false, 2);
   placePan1(arm, false);
 
   pickUpCleanPan(arm, false);
-  getSauce(arm, false, 5);
+  getSauce(arm, false, 2);
   placePan2(arm, false);
 
   pickUpCleanPan(arm, false);
-  getSauce(arm, false, 5);
+  getSauce(arm, false, 2);
   placePan3(arm, false);
 
   pickUpPan1(arm, false);
@@ -31,9 +31,8 @@ int main(int argc, char **argv)
   dropOffDirtyPan(arm, false);
 
   pickUpPan3(arm, false);
-  servePasta(arm, false);
-  dropOffDirtyPan(arm, false);
-  
+  placePan1(arm, false);
+
   ros::shutdown();
   return 0;
 }
